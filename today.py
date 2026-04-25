@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 
 def today():
-    target_date="25/04/2026"
+    target_date=str(datetime.now().strftime("%d/%m/%Y, %H:%M:%S"))[:10]
 
     with open('data.csv',mode='r', encoding='utf-8-sig') as file:
         fields = ['subject', 'hrs', 'notes', 'dt_timestamp']
@@ -15,5 +15,6 @@ def today():
 
             row_date=row['dt_timestamp'][:10]
             if row_date==target_date:
-                print(f"{row['subject']:<15} | {row['hrs']} hrs | {row['notes']:<30} | {row['dt_timestamp'][12:]}")
+                log_time = row['dt_timestamp'][11:17]
+                print(f"{row['subject']:<15} | {row['hrs']} hrs | {row['notes']:<30} | {log_time}")
 
