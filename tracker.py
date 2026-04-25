@@ -1,4 +1,6 @@
 from logging import log
+from today import today
+
 def main():
     print("Study Tracker")
     print("1. Log a session")
@@ -10,16 +12,30 @@ main()
 
 choice=int(input("Enter your choice: "))
 
+
 match choice:
     case 1:
         log()
-#     case 2:
-#         # viewing today's sessions
+    case 2:
+        today()
 #     case 3:
-#         # viewing today's sessions
+#         # viewing totals
 #     case 4:
-#         # viewing today's sessions
+#         # exit
     
+
+
+
+#1. log date 
+    # ->manual
+    # ->automatic(done)
+
+# 2. to view today's sessions
+    # format:-
+        # date:-     time:-
+        # subject:-    hrs_studied:-
+        # notes:- 
+
 
 
 
